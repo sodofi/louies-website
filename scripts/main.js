@@ -346,7 +346,7 @@ function printCredits() {
             \n____________________________________________               \
             \n____________________________________________               \
             \n                                                           \
-            \nCreated by Ilya Zaidze and Alex Shortt                     \
+            \nCreated by Sodofi                                          \
             \nAlex Shortt :: Developer                                   \
             \n  >Twitter: @_alexshortt                                   \
             \n  >Instagram: @alexander.shortt                            \
@@ -484,21 +484,25 @@ function homeLoad() {
     });
 }
 
+
+
 function contactLoad() {
-    $('#contact-send').click(function() {
+    $('#contact-form').submit(function(e) {
         if ($('#contact-email').val() == "" || $('#contact-subject').val() == "" || $('#contact-message').val() == "") {
+            e.preventDefault();
             notify("Fill in all fields");
             return;
         }
-
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "./scripts/email.php?email=" + encodeURIComponent($('#contact-email').val()) + "&subject=" + encodeURIComponent($('#contact-subject').val()) + "&message=" + encodeURIComponent($('#contact-message').val(), true));
-        xhr.send();
-
-        $('#contact-email').val("");
-        $('#contact-subject').val("");
-        $('#contact-message').val("");
-        notify("MESSAGE SENT");
+        
+        notify("SENDING MESSAGE...");
+        
+        // Clear form after submission
+        setTimeout(function() {
+            $('#contact-email').val("");
+            $('#contact-subject').val("");
+            $('#contact-message').val("");
+            notify("MESSAGE SENT");
+        }, 2000);
     });
 
     autosize($("#contact-email"));
@@ -779,7 +783,11 @@ function mediaLoad() {
 }
 
 function loadPage(dir, time) {
-    $("#awge-content").load(dir, function() {
+    var url = dir;
+    if (dir === "./pages/shop.html") {
+        url = dir + "?v=" + Date.now();
+    }
+    $("#awge-content").load(url, function() {
         $("#awge-tube-border").removeClass("awge-tube-border-mobile");
 
         switch (dir) {
@@ -849,53 +857,53 @@ http://patorjk.com/software/taag/#p=display&f=Varsity&t=Videos%0A
 
 var videos = {
     1: {
-        link: "https://dwvo2npct47gg.cloudfront.net/videos/monsterew-cropped.mp4",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/wrong.gif",
-        title: "AWGE 01",
-        desc: "AWGE 01 DESCRIPTION"
+        link: "https://video.twimg.com/amplify_video/1945546404916514816/vid/avc1/952x720/R9zVb90R37RTwPMm.mp4?tag=14",
+        gif: "https://i.imgur.com/VScKOVm.gif",
+        title: "ATHENS",
+        desc: "HOW I WANT LIFE TO LOOK"
     },
     2: {
-        link: "https://dwvo2npct47gg.cloudfront.net/videos/rocky-1-compressed.mp4",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/rocky-1.gif",
-        title: "AWGE 02",
-        desc: "AWGE 02 DESCRIPTION"
+        link: "https://video.twimg.com/amplify_video/1893656229957836800/vid/avc1/1920x1080/ejf43m10zKkA5U0x.mp4?tag=16",
+        gif: "https://i.imgur.com/YkpxSQY.gif",
+        title: "DENVER",
+        desc: "SUNRISE AT THE RED ROCKS"
     },
     3: {
-        link: "https://dwvo2npct47gg.cloudfront.net/videos/rocky-2.mov",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/rocky-2.gif",
-        title: "AWGE 03",
-        desc: "AWGE 03 DESCRIPTION"
+        link: "https://video.twimg.com/amplify_video/1940762186487369728/vid/avc1/3840x2026/-WNbsun5h8vsaKRx.mp4",
+        gif: "https://i.imgur.com/NNfH5HY.gif",
+        title: "SOPHON",
+        desc: "COME AND FIX YOURSELF"
     },
     4: {
-        link: "https://dwvo2npct47gg.cloudfront.net/videos/rocky-concert.mp4",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/rocky-concert.gif",
-        title: "AWGE 04",
-        desc: "AWGE 04 DESCRIPTION",
+        link: "https://video.twimg.com/amplify_video/1942290891395194881/vid/avc1/3840x2026/f8dib0jNP0AhcMWW.mp4",
+        gif: "https://i.imgur.com/W1zJhHN.gif",
+        title: "OCTANT",
+        desc: "GIRL DINNER",
     },
     5: {
-        link: "https://embed.vevo.com?isrc=USSM21701029&autoplay=true",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/feels.gif",
+        link: "https://video.twimg.com/amplify_video/1919359908660781056/vid/avc1/720x900/U-YJYWe92yYBpVv7.mp4?tag=16",
+        gif: "https://i.imgur.com/sUU2kW4.gif",
         isVevo: true,
-        title: "AWGE 05",
-        desc: "AWGE 05 DESCRIPTION"
+        title: "BERACHAIN",
+        desc: "WELCOME TO THE BERA BADDIE CRIB"
     },
     6: {
-        link: "https://dwvo2npct47gg.cloudfront.net/videos/rocky-music.mp4",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/rocky-music.gif",
-        title: "AWGE 06",
-        desc: "AWGE 06 DESCRIPTION"
+        link: "https://video.twimg.com/ext_tw_video/1907772950306062336/pu/vid/avc1/1080x1080/Mpc9428lcZR_VV2Y.mp4?tag=14",
+        gif: "https://i.imgur.com/q2LpBjx.gif",
+        title: "SOULMATES",
+        desc: "EXPERIMENTS INFALLING IN LOVE"
     },
     7: {
         link: "https://dwvo2npct47gg.cloudfront.net/videos/rocky-home.mp4",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/rocky-home.gif",
-        title: "AWGE 07",
-        desc: "AWGE 07 DESCRIPTION"
+        gif: "https://i.imgur.com/2spPaqd.gif",
+        title: "ZERION",
+        desc: "DINNER IN CANNES"
     },
     8: {
-        link: "https://dwvo2npct47gg.cloudfront.net/videos/rocky-jail.mp4",
-        gif: "https://dwvo2npct47gg.cloudfront.net/gifs/rocky-jail.gif",
-        title: "AWGE 08",
-        desc: "AWGE 08 DESCRIPTION"
+        link: "https://video.twimg.com/amplify_video/1937201540864831488/vid/avc1/4096x2160/4JStM0pEe6P7XWq0.mp4",
+        gif: "https://i.imgur.com/A7pHAhk.gif",
+        title: "NEAR",
+        desc: "THE STORY OF ERICA"
     }
 }
 var currentVideo = 1;
@@ -1101,7 +1109,11 @@ var shop = {
     }
 }
 
-var currentItem = {};
+var currentItem = {
+    type: "shirts",
+    index: 1,
+    size: null
+};
 
 function setShopProduct(type, index) {
     if (shop[type][index] == null) {
@@ -1369,7 +1381,7 @@ function updateBuyButton() {
     $(sizeButton).removeClass("shop-size-button-disabled");
 
     $(buyButton).text("Buy");
-    if (currentItem.type == null || currentItem.index == null) return;
+    if (!currentItem || currentItem.type == null || currentItem.index == null) return;
     else if (isOutOfStock(currentItem.type + "-" + currentItem.index + "-" + currentItem.size)) {
         $(sizeButton).addClass("shop-size-button-disabled");
         $(buyButton).addClass("shop-buy-button-disabled");
@@ -1377,7 +1389,7 @@ function updateBuyButton() {
 
     }
     else if (currentItem.type == "shirts" && currentItem.size == null) {
-        console.log(currentItem.type + "-" + currentItem.index + "-" + currentItem.size);
+        console.log(currentItem.type + "-" + currentItem.index + "-" + (currentItem.size || "null"));
         var allOOS = true;
         for (var i = 0; i < shop[currentItem.type][currentItem.index].sizes.length; i++) {
             var size = shop[currentItem.type][currentItem.index].sizes[i];

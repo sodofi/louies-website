@@ -747,7 +747,7 @@ screen and (max-height: 480px) and (orientation: landscape) {
 body {
 	margin: 0;
 	overflow: hidden;
-	cursor: url('https://dwvo2npct47gg.cloudfront.net/images/cursor.png') 11 32, auto;
+	cursor: url('https://cur.cursors-4u.net/others/images1/oth28.gif') 11 32, auto;
 }
 
 
@@ -768,7 +768,7 @@ body {
 .awge-tube-border {
 	width: 100%;
 	height: 100%;
-	background-image: url('https://dwvo2npct47gg.cloudfront.net/images/border-streched.png');
+	background-image: url('https://i.postimg.cc/02KVVY26/Group-2.png');
 	background-size: 100% 100%;
 	position: absolute;
 	z-index: 10;
@@ -790,7 +790,7 @@ screen and (max-height: 480px) and (orientation: landscape) {
 screen and (max-height: 480px) and (orientation: landscape) {
 	.awge-tube-border-mobile {
 		display: inherit;
-		background-image: url('https://dwvo2npct47gg.cloudfront.net/images/border-compressed.png');
+		background-image: url('https://i.postimg.cc/44W3WcFT/Group-3.png');
 	}
 }
 
@@ -1878,7 +1878,7 @@ screen and (max-height: 480px) and (orientation: landscape) {
 }
 
 .about-background {
-	background-image: url('https://dwvo2npct47gg.cloudfront.net/gifs/carti.gif');
+	background-image: url('https://i.imgur.com/VScKOVm.gif');
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
@@ -2383,7 +2383,7 @@ screen and (max-height: 480px) and (orientation: landscape) {
 
 .shop-content {
 	background: #D35144;
-	background-image: url('https://dwvo2npct47gg.cloudfront.net/gifs/asap.gif');
+	background-image: url('https://i.imgur.com/sUU2kW4.gif');
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -3154,7 +3154,7 @@ screen and (max-height: 480px) and (orientation: landscape) {
 	flex-direction: column;
 	height: 100vh;
 	width: 100vw;
-	cursor: url(https://dwvo2npct47gg.cloudfront.net/images/cursor-white.png) 2 27, auto;
+	cursor: url(https://cur.cursors-4u.net/others/images1/oth28.gif) 2 27, auto;
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait),
@@ -3617,7 +3617,7 @@ screen and (max-height: 480px) and (orientation: landscape) {
 .media-container {
 	width: 100%;
 	height: 100%;
-	cursor: url(https://dwvo2npct47gg.cloudfront.net/images/cursor-white.png) 2 27, auto;
+	cursor: url(https://cur.cursors-4u.net/others/images1/oth28.gif) 2 27, auto;
 }
 
 .media-option {
@@ -3647,6 +3647,24 @@ screen and (max-height: 480px) and (orientation: landscape) {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+}
+
+.share-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	padding: 20px;
+	border: 2px solid white;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.share-link:hover {
+	background: rgba(255, 255, 255, 0.1);
+	transform: scale(1.05);
+	border-color: #1DA1F2;
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait),
