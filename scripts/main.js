@@ -1604,7 +1604,7 @@ function loadModel(name) {
     var loadingID = showModelLoading();
 
     var mtlLoader = new THREE.MTLLoader();
-    mtlLoader.setPath('./awge-media/models/');
+            mtlLoader.setPath('./3elabs-media/models/');
     mtlLoader.load(name + '.mtl', function(materials) {
         materials.preload();
         var objLoader = new THREE.OBJLoader();
