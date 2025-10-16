@@ -857,16 +857,16 @@ http://patorjk.com/software/taag/#p=display&f=Varsity&t=Videos%0A
 
 var videos = {
     1: {
-        link: "https://video.twimg.com/amplify_video/1945546404916514816/vid/avc1/952x720/R9zVb90R37RTwPMm.mp4?tag=14",
-        gif: "https://i.imgur.com/VScKOVm.gif",
-        title: "ATHENS",
-        desc: "HOW I WANT LIFE TO LOOK"
+        link: "https://video.twimg.com/amplify_video/1957835643956158464/vid/avc1/3840x2026/P8DzcGAgKKU0vdaw.mp4",
+        gif: "https://i.imgur.com/vKjPJiy.gif",
+        title: "THE DIGITAL RENNAISSANCE",
+        desc: "SOPHIA'S ETHEREUM STORY"
     },
     2: {
-        link: "https://video.twimg.com/amplify_video/1893656229957836800/vid/avc1/1920x1080/ejf43m10zKkA5U0x.mp4?tag=16",
-        gif: "https://i.imgur.com/YkpxSQY.gif",
-        title: "DENVER",
-        desc: "SUNRISE AT THE RED ROCKS"
+        link: "https://video.twimg.com/amplify_video/1971246108694220803/vid/avc1/1920x1012/2dyaYzzq0PbwPRN9.mp4",
+        gif: "https://i.imgur.com/FQ0uCB0.gif",
+        title: "ETHEREUM IS EVERYWHERE",
+        desc: "BERLIN EDITION"
     },
     3: {
         link: "https://video.twimg.com/amplify_video/1940762186487369728/vid/avc1/3840x2026/-WNbsun5h8vsaKRx.mp4",
@@ -883,7 +883,6 @@ var videos = {
     5: {
         link: "https://video.twimg.com/amplify_video/1919359908660781056/vid/avc1/720x900/U-YJYWe92yYBpVv7.mp4?tag=16",
         gif: "https://i.imgur.com/sUU2kW4.gif",
-        isVevo: true,
         title: "BERACHAIN",
         desc: "WELCOME TO THE BERA BADDIE CRIB"
     },
